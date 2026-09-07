@@ -44,9 +44,9 @@ public/
 
 ## Photo
 
-Place your profile photo at `public/images/profile.jpg`. It is picked up
-automatically and served at `/images/profile.jpg`. Until the file exists, a
-placeholder is shown.
+Place your profile photo at `public/images/profile.webp`. It is picked up
+automatically and served at `/images/profile.webp`. Until the file exists, a
+placeholder is shown. A square image is recommended (it is cropped to a circle).
 
 ## Roadmap
 

@@ -2,7 +2,7 @@
 import { existsSync } from 'node:fs';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const profilePath = new URL('../../public/images/profile.jpg', import.meta.url);
+const profilePath = new URL('../../public/images/profile.webp', import.meta.url);
 const hasProfile = existsSync(profilePath);
 ---
 
@@ -13,7 +13,7 @@ const hasProfile = existsSync(profilePath);
         {
           hasProfile ? (
             <img
-              src="/images/profile.jpg"
+              src="/images/profile.webp"
               alt="Portrait of Sergi Romero"
               width="180"
               height="180"
