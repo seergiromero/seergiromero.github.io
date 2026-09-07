@@ -1,0 +1,32 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+const metaDescription =
+  description ?? 'Personal technical portfolio of Seergio Romero.';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={metaDescription} />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+    <footer class="site-footer">
+      <p>
+        <span class="visually-hidden">Contact: </span>
+        <a href="mailto:[email placeholder]">[email placeholder]</a>
+      </p>
+    </footer>
+  </body>
+</html>
