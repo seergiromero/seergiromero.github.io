@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About — Sergi Romero" description="About Sergi Romero: robotics and automation engineer.">
+  <main>
+    <h1>About</h1>
+
+    <section aria-labelledby="profile-heading">
+      <h2 id="profile-heading">Profile</h2>
+      <p>
+        Robotics and automation engineer with a strong interest in artificial
+        intelligence, neural networks, machine learning and research. I
+        like building systems that combine robotics with sensing, control and
+        data-driven methods — and I value being able to explain the engineering
+        decisions behind them.
+      </p>
+    </section>
+
+    <section aria-labelledby="education-heading">
+      <h2 id="education-heading">Education</h2>
+      <ul>
+        <li>
+          <strong>M.Sc. in Robotics and Automatic Control</strong> — Universitat
+          Politècnica de Catalunya (UPC), ETSEIB
+        </li>
+        <li>
+          <strong>B.Sc. in Industrial Electronic Engineering and Electronics</strong> —
+          Universitat Politècnica de Catalunya (UPC), EEBE
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Experience</h2>
+
+      <div class="job">
+        <h3>Universal Robots (UR) — R&amp;D Software, Student Worker</h3>
+        <p class="job-meta">Odense, Denmark · Master's internship · ~6 months</p>
+        <p>
+          Worked in the team behind the UR external control / driver stack. Built
+          the official <a
+            href="https://github.com/UniversalRobots/RTDE_ROS2_Publisher"
+            target="_blank"
+            rel="noopener noreferrer"
+            >RTDE_ROS2_Publisher</a
+          >
+          package from scratch, and contributed across the
+          <a
+            href="https://github.com/UniversalRobots/Universal_Robots_Client_Library"
+            target="_blank"
+            rel="noopener noreferrer"
+            >client library</a
+          >
+          and the
+          <a
+            href="https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver"
+            target="_blank"
+            rel="noopener noreferrer"
+            >ROS2 driver</a
+          >.
+        </p>
+        <p>What I worked on:</p>
+        <ul>
+          <li>
+            <strong>URScript</strong> — scripting on the robot side, including the
+            external control URScript and real-time communication setup.
+          </li>
+          <li>
+            <strong>RTDE (Real-Time Data Exchange)</strong> — real-time data
+            streaming; authored the RTDE_ROS2_Publisher package.
+          </li>
+          <li>
+            <strong>UR Cap (U+ / ucap) with Angular</strong> — designed a UR Cap,
+            a front-end extension that runs on the teach pendant.
+          </li>
+          <li>
+            <strong>Client library &amp; driver</strong> — sockets, threads,
+            real-time scheduling (FIFO) for the RTDE thread, payload handling, tool
+            communication refactor, and more.
+          </li>
+          <li>
+            <strong>Testing &amp; quality</strong> — unit tests, integration
+            coverage, CI workflows and debugging across the stack.
+          </li>
+        </ul>
+        <p class="note">
+          My open-source work during this internship is public on
+          <a
+            href="https://github.com/srvald"
+            target="_blank"
+            rel="noopener noreferrer"
+            >github.com/srvald</a
+          >, including merged pull requests in the UR ROS stack.
+        </p>
+      </div>
+
+      <div class="job">
+        <h3>Mobile Industrial Robots (MIR) — Technical Engineer</h3>
+        <p class="job-meta">Intern, then part-time · UK &amp; Ireland · ~2 years</p>
+        <p>
+          Worked in technical service while studying, gaining hands-on knowledge of
+          the hardware. Responsibilities included:
+        </p>
+        <ul>
+          <li>
+            <strong>Hardware</strong> — repairing robots and understanding the
+            physical system.
+          </li>
+          <li>
+            <strong>Networks &amp; diagnostics</strong> — networking, and
+            analysing the robot's software: ROS topics, nodes, and
+            <code>rosout</code> logs to find failures.
+          </li>
+          <li>
+            <strong>REST API</strong> — building small applications on the MIR
+            REST API.
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

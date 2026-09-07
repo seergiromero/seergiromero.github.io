@@ -1,0 +1,46 @@
+---
+const pathname = Astro.url.pathname;
+
+interface NavItem {
+  href: string;
+  label: string;
+}
+
+const navItems: NavItem[] = [
+  { href: '/', label: 'Home' },
+  { href: '/projects/', label: 'Projects' },
+  { href: '/about/', label: 'About' },
+  { href: '/contact/', label: 'Contact' },
+];
+
+const isActive = (href: string): boolean => {
+  if (href === '/') {
+    return pathname === '/' || pathname === '/index.html';
+  }
+  return pathname.startsWith(href);
+};
+---
+
+<nav class="site-nav" aria-label="Primary">
+  <a href="/" class="site-nav__brand" aria-label="Seergio Romero — home">
+    SR<span class="site-nav__brand-sub">.io</span>
+  </a>
+  <ul class="site-nav__list">
+    {
+      navItems.map((item) => (
+        <li>
+          <a
+            href={item.href}
+            class:list={[
+              'site-nav__link',
+              { 'site-nav__link--active': isActive(item.href) },
+            ]}
+            aria-current={isActive(item.href) ? 'page' : undefined}
+          >
+            {item.label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>

@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import SiteNav from '../components/SiteNav.astro';
 
 interface Props {
   title: string;
@@ -21,11 +22,12 @@ const metaDescription =
     <title>{title}</title>
   </head>
   <body>
+    <SiteNav />
     <slot />
     <footer class="site-footer">
       <p>
         <span class="visually-hidden">Contact: </span>
-        <a href="mailto:[email placeholder]">[email placeholder]</a>
+        <a href="mailto:sromerovalderas@gmail.com">sromerovalderas@gmail.com</a>
       </p>
     </footer>
   </body>

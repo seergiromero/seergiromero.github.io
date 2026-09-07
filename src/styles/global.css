@@ -97,6 +97,152 @@ button:focus-visible {
   color: inherit;
 }
 
+/* Navigation */
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: var(--space-2) var(--space-2);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-nav__brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.site-nav__brand-sub {
+  color: var(--color-accent);
+}
+
+.site-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav__link {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  padding: 0.25rem 0;
+}
+
+.site-nav__link:hover {
+  color: var(--color-text);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.site-nav__link--active {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+/* Hero */
+.hero {
+  padding: var(--space-4) 0;
+}
+
+.hero__media {
+  margin-bottom: var(--space-3);
+}
+
+.hero__photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-border);
+}
+
+.hero__photo--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0 0 var(--space-1);
+}
+
+.tagline {
+  font-size: 1.25rem;
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-1);
+}
+
+.intro {
+  max-width: 42rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* Generic pages */
+.page-intro {
+  max-width: 42rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-3);
+}
+
+/* Contact */
+.contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-2);
+  max-width: 42rem;
+}
+
+.contact-list strong {
+  display: inline-block;
+  min-width: 5rem;
+  margin-right: var(--space-2);
+}
+
+/* About */
+.job {
+  margin-bottom: var(--space-3);
+}
+
+.job h3 {
+  margin: 0 0 0.25rem;
+}
+
+.job-meta {
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-1);
+  font-size: 0.95rem;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    monospace;
+  font-size: 0.9em;
+  background-color: var(--color-border);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+
+.note {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* Misc */
 .visually-hidden {
   position: absolute;
   width: 1px;
