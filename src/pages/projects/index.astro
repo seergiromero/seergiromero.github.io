@@ -1,15 +1,20 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import { projects } from '../../data/projects';
 ---
 
 <BaseLayout title="Projects — Sergi Romero" description="Selected technical projects by Sergi Romero.">
   <main>
     <h1>Projects</h1>
+    <p class="page-meta">{projects.length} projects</p>
     <p class="page-intro">
-      Selected technical work. Each project links to its repository and, where
-      it warrants one, a deeper technical case study.
+      Selected technical work. Each project links to its repository, demo or
+      announcement.
     </p>
 
-    <p class="placeholder-note">Project cards coming soon.</p>
+    <div class="project-grid">
+      {projects.map((project, i) => <ProjectCard project={project} index={i + 1} />)}
+    </div>
   </main>
 </BaseLayout>

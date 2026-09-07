@@ -2,18 +2,26 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="About — Sergi Romero" description="About Sergi Romero: robotics and automation engineer.">
-  <main>
+<BaseLayout
+  title="About — Sergi Romero"
+  description="About Sergi Romero: robotics and automation engineer working at the intersection of robotics, software, and intelligent systems."
+>
+  <main class="about">
     <h1>About</h1>
 
     <section aria-labelledby="profile-heading">
       <h2 id="profile-heading">Profile</h2>
       <p>
-        Robotics and automation engineer with a strong interest in artificial
-        intelligence, neural networks, machine learning and research. I
-        like building systems that combine robotics with sensing, control and
-        data-driven methods — and I value being able to explain the engineering
-        decisions behind them.
+        I’m a robotics and automation engineer interested in building intelligent
+        systems at the intersection of robotics, software, and machine learning.
+        My interests include artificial intelligence, neural networks, perception,
+        control, and research.
+      </p>
+      <p>
+        I particularly enjoy working on problems where software meets the physical
+        world — designing systems that combine sensing, control, communication,
+        and data-driven methods. I also care about understanding and communicating
+        the engineering decisions behind the systems I build.
       </p>
     </section>
 
@@ -21,8 +29,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <h2 id="education-heading">Education</h2>
       <ul>
         <li>
-          <strong>M.Sc. in Robotics and Automatic Control</strong> — Universitat
-          Politècnica de Catalunya (UPC), ETSEIB
+          <strong>M.Sc. in Robotics and Automatic Control</strong> —
+          Universitat Politècnica de Catalunya (UPC), ETSEIB
         </li>
         <li>
           <strong>B.Sc. in Industrial Electronic Engineering and Electronics</strong> —
@@ -37,84 +45,98 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <div class="job">
         <h3>Universal Robots (UR) — R&amp;D Software, Student Worker</h3>
         <p class="job-meta">Odense, Denmark · Master's internship · ~6 months</p>
+
         <p>
-          Worked in the team behind the UR external control / driver stack. Built
-          the official <a
+          I worked in the R&amp;D team responsible for software used to interface
+          with and control Universal Robots. My work focused on the external
+          control and communication stack, contributing to both existing
+          open-source components and new software developed from scratch.
+        </p>
+
+        <p>
+          One of my main projects was the official
+          <a
             href="https://github.com/UniversalRobots/RTDE_ROS2_Publisher"
             target="_blank"
             rel="noopener noreferrer"
-            >RTDE_ROS2_Publisher</a
-          >
-          package from scratch, and contributed across the
+          >RTDE_ROS2_Publisher</a>
+          package, which I developed from scratch. I also contributed to the
           <a
             href="https://github.com/UniversalRobots/Universal_Robots_Client_Library"
             target="_blank"
             rel="noopener noreferrer"
-            >client library</a
-          >
+          >Universal Robots Client Library</a>
           and the
           <a
             href="https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver"
             target="_blank"
             rel="noopener noreferrer"
-            >ROS2 driver</a
-          >.
+          >Universal Robots ROS 2 Driver</a>.
         </p>
-        <p>What I worked on:</p>
+
+        <p>Some of the areas I worked on include:</p>
+
         <ul>
           <li>
-            <strong>URScript</strong> — scripting on the robot side, including the
-            external control URScript and real-time communication setup.
+            <strong>URScript &amp; external control</strong> — developing and
+            working with robot-side scripts and the real-time communication
+            setup used for external control.
           </li>
           <li>
-            <strong>RTDE (Real-Time Data Exchange)</strong> — real-time data
-            streaming; authored the RTDE_ROS2_Publisher package.
+            <strong>RTDE</strong> — working with Universal Robots' Real-Time Data
+            Exchange protocol and developing the RTDE_ROS2_Publisher package.
           </li>
           <li>
-            <strong>UR Cap (U+ / ucap) with Angular</strong> — designed a UR Cap,
-            a front-end extension that runs on the teach pendant.
+            <strong>UR Caps &amp; Angular</strong> — designing a UR Cap,
+            a front-end extension running directly on the robot's teach pendant.
           </li>
           <li>
-            <strong>Client library &amp; driver</strong> — sockets, threads,
-            real-time scheduling (FIFO) for the RTDE thread, payload handling, tool
-            communication refactor, and more.
+            <strong>Client library &amp; ROS 2 driver</strong> — contributing to
+            socket communication, multithreading, real-time scheduling (FIFO),
+            payload handling, and tool communication.
           </li>
           <li>
-            <strong>Testing &amp; quality</strong> — unit tests, integration
-            coverage, CI workflows and debugging across the stack.
+            <strong>Testing &amp; software quality</strong> — writing unit and
+            integration tests, improving CI workflows, and debugging issues
+            across the software stack.
           </li>
         </ul>
+
         <p class="note">
-          My open-source work during this internship is public on
+          My open-source work from this internship is available on
           <a
             href="https://github.com/srvald"
             target="_blank"
             rel="noopener noreferrer"
-            >github.com/srvald</a
-          >, including merged pull requests in the UR ROS stack.
+          >GitHub</a>,
+          including merged contributions to the Universal Robots ROS ecosystem.
         </p>
       </div>
 
       <div class="job">
-        <h3>Mobile Industrial Robots (MIR) — Technical Engineer</h3>
-        <p class="job-meta">Intern, then part-time · UK &amp; Ireland · ~2 years</p>
+        <h3>Mobile Industrial Robots (MiR) — Technical Engineer</h3>
+        <p class="job-meta">Intern, then part-time · ~2 years</p>
+
         <p>
-          Worked in technical service while studying, gaining hands-on knowledge of
-          the hardware. Responsibilities included:
+          I worked in technical service while completing my degree, gaining
+          hands-on experience with both the hardware and software of autonomous
+          mobile robots.
         </p>
+
         <ul>
           <li>
-            <strong>Hardware</strong> — repairing robots and understanding the
-            physical system.
+            <strong>Hardware &amp; troubleshooting</strong> — diagnosing and
+            repairing robots while developing an understanding of the physical
+            systems behind them.
           </li>
           <li>
-            <strong>Networks &amp; diagnostics</strong> — networking, and
-            analysing the robot's software: ROS topics, nodes, and
-            <code>rosout</code> logs to find failures.
+            <strong>ROS &amp; networking</strong> — diagnosing software and
+            communication issues using ROS topics, nodes, networking tools,
+            and <code>rosout</code> logs.
           </li>
           <li>
-            <strong>REST API</strong> — building small applications on the MIR
-            REST API.
+            <strong>REST API</strong> — developing small applications and tools
+            using the MiR REST API.
           </li>
         </ul>
       </div>

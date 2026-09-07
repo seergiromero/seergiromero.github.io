@@ -1,0 +1,80 @@
+---
+import type { Project } from '../data/projects';
+
+interface Props {
+  project: Project;
+  index?: number;
+  variant?: 'full' | 'compact';
+}
+
+const { project, index, variant = 'full' } = Astro.props;
+const compact = variant === 'compact';
+---
+
+<article
+  class:list={[
+    'project-card',
+    { 'project-card--compact': compact },
+  ]}
+>
+  <div class="project-card__media" aria-hidden="true">
+    {project.image ? (
+      <img src={project.image} alt="" loading="lazy" decoding="async" />
+    ) : (
+      <span class="project-card__placeholder">{project.title}</span>
+    )}
+    {index !== undefined && (
+      <span class="project-card__index">{String(index).padStart(2, '0')}</span>
+    )}
+  </div>
+
+  <div class="project-card__body">
+    {compact ? (
+      <>
+        <h2>{project.title}</h2>
+        <p class="project-card__tagline">{project.tagline}</p>
+        <a class="project-card__readmore" href="/projects/">
+          View project
+        </a>
+      </>
+    ) : (
+      <>
+        <p class="project-card__tagline">{project.tagline}</p>
+        <h2>{project.title}</h2>
+        <p class="project-card__description">{project.description}</p>
+
+        <ul class="project-card__tech" aria-label="Technologies">
+          {project.technologies.map((tech) => <li>{tech}</li>)}
+        </ul>
+
+        <ul class="project-card__links">
+          {project.links.demo?.map((demo) => (
+            <li>
+              <a href={demo.url} target="_blank" rel="noopener noreferrer">
+                {demo.label}
+              </a>
+            </li>
+          ))}
+          {project.links.repository && (
+            <li>
+              <a
+                href={project.links.repository}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Repository
+              </a>
+            </li>
+          )}
+          {project.links.post && (
+            <li>
+              <a href={project.links.post} target="_blank" rel="noopener noreferrer">
+                Project announcement
+              </a>
+            </li>
+          )}
+        </ul>
+      </>
+    )}
+  </div>
+</article>

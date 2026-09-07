@@ -1,9 +1,13 @@
 ---
 import { existsSync } from 'node:fs';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { projects } from '../data/projects';
 
 const profilePath = new URL('../../public/images/profile.webp', import.meta.url);
 const hasProfile = existsSync(profilePath);
+
+const featuredProjects = projects.filter((p) => p.featured);
 ---
 
 <BaseLayout title="Sergi Romero — Portfolio">
@@ -43,7 +47,14 @@ const hasProfile = existsSync(profilePath);
 
     <section class="projects" aria-labelledby="projects-heading">
       <h2 id="projects-heading">Projects</h2>
-      <p class="placeholder-note">Projects coming soon.</p>
+      <div class="project-grid">
+        {featuredProjects.map((project, i) => (
+          <ProjectCard project={project} index={i + 1} variant="compact" />
+        ))}
+      </div>
+      <p>
+        <a href="/projects/">View all projects</a>
+      </p>
     </section>
   </main>
 </BaseLayout>
