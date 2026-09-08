@@ -136,4 +136,38 @@ export const projects: Project[] = [
     status: 'completed',
     featured: false,
   },
+  {
+    slug: 'rids-ros2-intrusion-detection',
+    title: 'RIDS - ROS 2 Network Intrusion Detection System',
+    tagline: 'Detecting rogue nodes on ROS 2/DDS discovery traffic',
+    description:
+      "A passive intrusion-detection research prototype for ROS 2/DDS networks. RIDS observes RTPS discovery traffic, reconstructs the communication graph of a mobile-robot system, and compares it with a trusted baseline to identify rogue participants, unexpected endpoints, and unauthorized use of security-sensitive topics such as /cmd_vel. Detection runs through deterministic rules with severity-aware, deduplicated alerts in JSONL. Includes an end-to-end TurtleBot3/Nav2 simulation demonstration and 196 tests.",
+    technologies: [
+      'ROS 2 (Jazzy)',
+      'DDS/RTPS',
+      'Python',
+      'Scapy',
+      'NetworkX',
+      'Nav2',
+      'Gazebo',
+      'Network Security',
+      'JSONL',
+    ],
+    links: {
+      demo: [
+        {
+          label: 'RTPS discovery graph view',
+          url: 'https://github.com/seergiromero/ROS2-Intrusion-Detection/blob/main/docs/pictures/graph.png',
+        },
+        {
+          label: 'End-to-end demo',
+          url: 'https://github.com/seergiromero/ROS2-Intrusion-Detection/blob/main/docs/pictures/cmd.png',
+        },
+      ],
+      repository: 'https://github.com/seergiromero/ROS2-Intrusion-Detection',
+    },
+    image: '/images/rids-cmd.png',
+    status: 'completed',
+    featured: false,
+  },
 ];
