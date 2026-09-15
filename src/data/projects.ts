@@ -110,7 +110,7 @@ export const projects: Project[] = [
     },
     image: '/images/ur-chess-gazebo.jpeg',
     status: 'completed',
-    featured: true,
+    featured: false,
   },
   {
     slug: 'dental-implant-classification',
@@ -168,6 +168,6 @@ export const projects: Project[] = [
     },
     image: '/images/rids-cmd.png',
     status: 'completed',
-    featured: false,
+    featured: true,
   },
 ];
