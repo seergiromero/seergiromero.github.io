@@ -84,6 +84,39 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    slug: 'px4-3d-autonomous-exploration',
+    title: 'PX4 3D Autonomous Exploration',
+    tagline: 'Frontier-based exploration for an autonomous aerial robot',
+    description:
+      'A ROS 2 and PX4 simulation pipeline for autonomous exploration of an unknown indoor environment. A simulated X500 quadrotor uses LiDAR-inertial odometry with FAST-LIO, builds an OctoMap, detects and clusters 3D frontiers, selects information-gain goals, and follows collision-aware A* paths through PX4 offboard control.',
+    technologies: [
+      'ROS 2 (Jazzy)',
+      'PX4 SITL',
+      'Gazebo Sim',
+      'FAST-LIO',
+      'LiDAR',
+      'OctoMap',
+      '3D frontier detection',
+      '3D A* planning',
+      'C++',
+    ],
+    links: {
+      demo: [
+        {
+          label: 'Frontier exploration and A* demo',
+          url: 'https://github.com/user-attachments/assets/2a40ce50-9908-4d66-995d-d4b52b50988d',
+        },
+        {
+          label: 'FAST-LIO 3D reconstruction demo',
+          url: 'https://github.com/user-attachments/assets/68d176f1-1d23-44a6-8be0-1bdeffeeffe2',
+        },
+      ],
+      repository: 'https://github.com/seergiromero/ROS2-PX4-Learning',
+    },
+    status: 'completed',
+    featured: true,
+  },
+  {
     slug: 'ur-ros-chess',
     title: 'UR Chess Robot',
     tagline: 'A UR3 cobot that plays chess against a human',
