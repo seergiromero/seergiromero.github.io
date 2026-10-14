@@ -113,6 +113,7 @@ export const projects: Project[] = [
       ],
       repository: 'https://github.com/seergiromero/ROS2-PX4-Learning',
     },
+    image: '/images/frontier_detector.png',
     status: 'completed',
     featured: true,
   },
